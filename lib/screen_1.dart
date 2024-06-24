@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import './screen_2.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 4, 185, 4),
@@ -42,10 +43,15 @@ class TextContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        '     All Recipes   \nOn Your Finger Tips ',
+    return Padding(
+      padding: EdgeInsets.only(top: 60.0),
+      child: const Text(
+        '      All Recipes 🥗   \nOn Your Finger Tips ',
         textScaler: TextScaler.linear(2),
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Color.fromARGB(255, 231, 247, 88),
+        ),
       ),
     );
   }
@@ -57,12 +63,19 @@ class ButtonContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(top: 300.0),
+        padding: const EdgeInsets.only(top: 250.0),
         child: ElevatedButton(
-            onPressed: () {},
-            child: Text("Get Started "),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Screen2(),
+                  ));
+            },
+            child: const Text("Get Started "),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.yellowAccent,
+              foregroundColor: const Color.fromARGB(255, 4, 185, 4),
+              backgroundColor: const Color.fromARGB(255, 255, 255, 255),
               minimumSize: const Size(300, 50),
             )));
   }
