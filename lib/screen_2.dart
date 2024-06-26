@@ -213,39 +213,48 @@ class RecipeContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: 10.0),
-      child: Container(
-        height: MediaQuery.of(context).size.height, // Ensure bounded height
+      child: SingleChildScrollView(
         child: CustomScrollView(
+          shrinkWrap: true,
           primary: false,
           slivers: [
-            const SliverPadding(padding: EdgeInsets.all(10.0)),
-            SliverGrid.count(
-              crossAxisCount: 2,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              children: [
-                Container(
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: AspectRatio(
-                          aspectRatio: 1, // Adjust the aspect ratio as needed
-                          child: Image.asset(
-                            'assets/Dish1.png',
-                            fit: BoxFit.cover,
+            SliverPadding(
+              padding: EdgeInsets.all(10.0),
+              sliver: SliverGrid.count(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 204, 252, 208),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/Dish1.png',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
-                      Text(
-                        'Dish 1',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Dish 1',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                // Add more containers for other dishes as needed
-              ],
-            )
+                  // Add more containers for other dishes as needed
+                ],
+              ),
+            ),
           ],
         ),
       ),
