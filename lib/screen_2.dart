@@ -12,13 +12,15 @@ class Screen2 extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
-        body: const Column(
-          children: [
-            SearchBar(),
-            OptionsContainer(),
-            TextCntr(),
-            RecipeContainer()
-          ],
+        body: SingleChildScrollView(
+          child: const Column(
+            children: [
+              SearchBar(),
+              OptionsContainer(),
+              TextCntr(),
+              RecipeContainer()
+            ],
+          ),
         ),
         bottomNavigationBar: BottomAppBar(
           color: Color.fromARGB(255, 83, 83, 83),
@@ -242,6 +244,18 @@ class RecipeContainer extends StatelessWidget {
                           ),
                         ),
                         Padding(
+                          padding: EdgeInsets.only(left: 40.0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star)
+                            ],
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             'Dish 1',
@@ -251,7 +265,234 @@ class RecipeContainer extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // Add more containers for other dishes as needed
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 204, 252, 208),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/Dish2.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 40.0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star)
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Dish 2',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 204, 252, 208),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/Dish3.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 40.0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star)
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Dish 3',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 204, 252, 208),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/Dish4.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 40.0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star)
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Dish 4',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 204, 252, 208),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/Dish5.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 40.0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star)
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Dish 5',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 204, 252, 208),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/Dish6.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 40.0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star)
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Dish 6',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 204, 252, 208),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/Dish1.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 40.0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star)
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Dish 1',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
